@@ -1,0 +1,172 @@
+{
+	"info": {
+		"_postman_id": "c4a42c2f-e2ea-48d9-b2b8-6eefa696493e",
+		"name": "CuartaEntregaKC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15752495"
+	},
+	"item": [
+		{
+			"name": "GetAnnouncements",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/announcements/?fields=name",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"announcements",
+						""
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "skip",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "tag",
+							"value": "Work",
+							"disabled": true
+						},
+						{
+							"key": "sell",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "minPrice",
+							"value": "100",
+							"disabled": true
+						},
+						{
+							"key": "maxPrice",
+							"value": "1000",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "T",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "sort",
+							"value": "price",
+							"disabled": true
+						},
+						{
+							"key": "fields",
+							"value": "name"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostAnnouncement",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Test Postman",
+							"type": "text"
+						},
+						{
+							"key": "sell",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "122",
+							"type": "text"
+						},
+						{
+							"key": "tags",
+							"value": "Lifestyle",
+							"type": "text"
+						},
+						{
+							"key": "photo",
+							"type": "file",
+							"src": "/C:/Users/usuario/Desktop/Zordon.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseURL}}/announcements/",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"announcements",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTags",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/announcements/tags",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"announcements",
+						"tags"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ResetDatabase",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"confirmation\": \"Yes\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/announcements/resetDatabase",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"announcements",
+						"resetDatabase"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
